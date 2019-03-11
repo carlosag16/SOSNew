@@ -1,0 +1,134 @@
+/* Topnav
+      ----------------------------------------------*/
+      .menu {
+         background-color: #1c1c1c;
+         height:47px; 
+         position:fixed;
+         width:100%;
+         top:-2;
+         left:0;
+         right:0;
+         z-index: 100;
+      }
+
+      .navbar {
+        overflow: hidden;
+        max-width:1000px;
+        margin:0px auto!important;
+        font-family: Arial;
+        font-size:16px;
+      }
+
+      .navbar a {
+        float: left;
+        color: #fff;
+        text-align: center;
+        padding: 12px 35px 12px 20px;
+        text-decoration: none;
+      }
+
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        border-bottom: 4px solid #af211c;
+      }
+
+      .navbar a.home {
+        padding: 4px 10px;
+      }
+
+      .navbar a.home:hover {
+        background:none;
+        border:none;
+      }
+
+      .navbar-right {
+        float: right;
+      }
+
+      #active {
+        background:#af211c;
+        border:none;
+      }
+
+      #icon-dropdown {
+        font-size:10px;
+        padding-left: 5px;
+      }
+
+      #icon-cancela {
+        padding-right: 5px;
+      }
+
+      #icon-info {
+        padding-right: 5px;
+      }
+
+      .dropdown {
+          float: left;
+          overflow: hidden;
+          border:none;
+      }
+
+      .dropbtn {
+        padding: 12px 16px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .dropdown-content {
+        display: none;
+        background:#af211c;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 10px auto 10px 25px!important;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-size:14px;
+        color:#fff;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #e62f29;
+        border:none;
+        padding-left:30px;
+        color:#fff;
+      }
+
+      .show {
+        display:block;
+      }
+
+      @media(max-width:400px){
+        .dropbtn, .dropdown-content a, .navbar a {
+          font-size:13px!important;
+        }
+        .dropbtn {
+          padding: 14px 10px;
+        }
+        .navbar a {
+          padding: 14px 35px 14px 10px;
+        }
+      }
+      @media(max-width:200px){
+        .dropbtn, .dropdown-content a, .navbar a {
+          font-size:10px!important;
+        }
+        .dropbtn {
+          padding: 16px 10px;
+        }
+        .navbar a {
+          padding: 16px 35px 16px 10px;
+        }
+      }

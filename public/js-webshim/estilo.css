@@ -1,0 +1,1059 @@
+@media only screen and (min-width: 1024px) {
+    /*******************************************************
+	Definir o estilo geral do CORPO do FICAT 2.0
+    *******************************************************/
+    .container {
+        margin: auto;
+        width: 65%;
+    }
+    /*******************************************************
+	Definir o estilo das IMAGENS de TOPO e FUNDO
+	*******************************************************/
+    img {
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+    /*******************************************************
+	Definir o estilo do MENU que fica acima do formulário
+	*******************************************************/
+    .navResponsive {
+        display: none;
+    }
+    .navegacao {
+        margin: 10px;
+        padding: 0px;
+        max-width: 100%;
+        position: relative;
+        height: auto;
+    }
+    .menu {
+        list-style-type: none;
+        border-top: 1px solid rgb(150, 20, 50);
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        text-align: center;
+    }
+    .menu li {
+        flex: 1;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0px;
+        padding: 0px;
+    }
+    .menu li a {
+        font-family: Palatino Linotype;
+        text-align: center;
+        display: block;
+        margin: 0px;
+        padding: 10px;
+        color: black;
+        position: relative;
+        vertical-align: middle;
+        max-width: 100%;
+        text-decoration: none;
+    }
+    .menu li a:hover {
+        background-color: rgb(215, 215, 215);
+        border-radius: 20px;
+        display: block;
+        margin: 0px;
+        padding: 10px;
+        position: relative;
+        vertical-align: center;
+        max-width: 100%;
+        text-decoration: none;
+    }
+    .menu li a i {
+        color: rgb(150, 20, 50);
+        vertical-align: middle;
+        padding-right: 5px;
+    }
+    .dropdown:hover>a {
+        border-radius: 20px;
+        background-color: rgb(215, 215, 215);
+        text-decoration: none;
+    }
+    .submenu {
+        display: none;
+        list-style-type: none;
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        max-width: 100%;
+        vertical-align: middle;
+        z-index: 1;
+        display: block-flex;
+    }
+    .dropdown:hover .submenu {
+        position: absolute;
+        display: block;
+        text-align: center;
+    }
+    .dropdown .submenu li a:hover {
+        margin: 0px;
+        width: 100%;
+        border: 1px solid rgb(150, 20, 50);
+        text-decoration: none;
+    }
+    /*******************************************************
+	Definir o estilo do FORMULÁRIO
+	*******************************************************/
+    form {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        max-width: 100%;
+        display: block-flex;
+        flex: 1;
+    }
+    fieldset {
+        margin: 0px;
+        padding: 0px;
+        border: 1px solid rgb(150, 20, 50);
+        border-radius: 20px;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    legend {
+        margin: 5px;
+        padding: 10px;
+        border-radius: 20px;
+        vertical-align: middle;
+        background-color: rgb(150, 20, 50);
+        font-family: Palatino Linotype;
+        color: white;
+    }
+    span {
+        color: red;
+        font-size: 20px;
+    }
+    /***************************************************************************
+	Define o estilo do cabeçalho e rodapé nos quais estão inseridoas as imagens
+	***************************************************************************/
+    header,
+    footer {
+        margin: auto;
+        width: 100%;
+    }
+    .campo {
+        margin: 15px;
+        padding: 0px;
+        display: block;
+        max-width: 100%;
+        font-family: Palatino Linotype;
+    }
+    label {
+        margin: 5px;
+        padding: 0px;
+        display: inline-block;
+        width: 25%;
+        text-align: right;
+        vertical-align: middle;
+        font-weight: bold;
+        font-family: Palatino Linotype;
+    }
+    /*************************************************
+	Estilo de fieldset CAMPO1
+	*************************************************/
+    .campo1 input {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 60%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    textarea {
+        width: 60%;
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        resize: none;
+        border-bottom-color: rgb(238, 238, 238);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-style: inset;
+        border-bottom-width: 2px;
+        border-image-outset: 0px;
+        border-image-repeat: stretch;
+        border-image-slice: 100%;
+        border-image-source: none;
+        border-image-width: 1;
+        border-left-color: rgb(238, 238, 238);
+        border-left-style: inset;
+        border-left-width: 2px;
+        border-right-color: rgb(238, 238, 238);
+        border-right-style: inset;
+        border-right-width: 2px;
+        border-top-color: rgb(238, 238, 238);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-top-style: inset;
+        border-top-width: 2px;
+    }
+    /*************************************************
+	Estilo de fieldset CAMPO2
+	*************************************************/
+    .campo2 input[type=text] {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 49%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    .campo2 input[type=checkbox] {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        text-align: left;
+        display: inline-block;
+    }
+    .campo2 select {
+        margin: 0px;
+        padding: 5px;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .campo2 input[type=number] {
+        margin: 0px;
+        padding: 5px;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        display: inline-block;
+        width: 28%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .campo2 input[type=radio] {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        display: inline-block;
+    }
+    .categoriaAssunto {
+        float: right;
+        max-width: 100%;
+        width: 19%;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .categoriaAssunto a {
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid rgb(150, 20, 50);
+        border-radius: 20px;
+        display: inline-block;
+        color: rgb(150, 20, 50);
+        text-decoration: none;
+    }
+    .categoriaAssunto:hover a {
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid red;
+        border-radius: 20px;
+        display: inline-block;
+        color: red;
+        text-decoration: none;
+    }
+    /*************************************************
+	Estilo de fieldset CAMPO3
+	*************************************************/
+    .campo3 input {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 50%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    .campo3 select {
+        margin: 0px;
+        padding: 5px;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .campo3 nav {
+        margin: 0px;
+        padding: 5px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .campo3 nav a {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        vertical-align: middle;
+        border: 2px solid rgb(150, 20, 50);
+        border-radius: 10px;
+        font-family: Palatino Linotype;
+        font-size: 16px;
+        color: rgb(150, 20, 50);
+        text-decoration: none;
+    }
+    .campo3 nav a:hover {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        vertical-align: middle;
+        border: 2px solid red;
+        border-radius: 10px;
+        font-family: Palatino Linotype;
+        font-size: 16px;
+        color: red;
+        text-decoration: none;
+    }
+    /*******************************************************
+	Definir o estilo geral do BOTÃO
+	*******************************************************/
+    .botao {
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 100%;
+        max-height: 100%;
+        text-align: center;
+        vertical-align: middle;
+        color: black;
+        background-color: white;
+        font-family: Palatino Linotype;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 20px;
+        position: relative;
+        display: block;
+        flex: 1;
+        text-decoration: none;
+    }
+    .botao:hover {
+        border: 2px solid rgb(150, 20, 50);
+    }
+
+    /*******************************************************
+        Definir o estilo do texto da aba "Sobre"
+    *******************************************************/
+
+    .sobre{
+	text-align: justify;
+	margin-left: 5px;
+	margin-right: 5px;
+    }
+
+    .second-footer{
+	text-align: center;
+    }
+
+}
+
+
+@media only screen and (min-width: 721px) and (max-width: 1023px) {
+    /*******************************************************
+	Definir o estilo geral do CORPO do FICAT 2.0
+	*******************************************************/
+    body {
+        background-image: url("http://bcficat.ufpa.br/ficat_background.jpg");
+        background-size: 200px;
+    }
+    .container {
+        margin: auto;
+        width: 100%;
+    }
+    /*******************************************************
+	Definir o estilo das IMAGENS de TOPO e FUNDO
+	*******************************************************/
+    img {
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+    /*******************************************************
+	Definir o estilo do MENU que fica acima do formulário
+	*******************************************************/
+    .navResponsive,
+    a,
+    i {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        text-align: right;
+    }
+    .navResponsive a {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 20px;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        color: rgb(150, 20, 50);
+    }
+    .navegacao {
+        display: none;
+        margin: 10px;
+        padding: 0px;
+        max-width: 100%;
+        position: relative;
+        height: auto;
+    }
+    .navegacao a:active,
+    .navResponsive a:active {
+        color: red;
+    }
+    .menu {
+        margin: 0px auto;
+        padding: 0px;
+        list-style-type: none;
+        border-top: 1px solid rgb(150, 20, 50);
+    }
+    .menu li {
+        flex: 1;
+        text-align: left;
+        vertical-align: middle;
+        margin: 0px;
+        padding: 0px;
+    }
+    .menu li a {
+        font-family: Palatino Linotype;
+        text-align: center;
+        display: inline-block;
+        margin: 0px;
+        padding: 15px;
+        color: black;
+        position: relative;
+        vertical-align: middle;
+        max-width: 100%;
+    }
+    .menu li a i {
+        color: rgb(150, 20, 50);
+        vertical-align: middle;
+        padding-right: 5px;
+    }
+    .submenu {
+        display: none;
+        list-style-type: none;
+    }
+    /*******************************************************
+	Definir o estilo do FORMULÁRIO
+	*******************************************************/
+    form {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        max-width: 100%;
+        display: block-flex;
+        flex: 1;
+    }
+    fieldset {
+        margin: 0px;
+        padding: 0px;
+        border: 1px solid rgb(150, 20, 50);
+        border-radius: 20px;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    legend {
+        margin: 5px;
+        padding: 10px;
+        border-radius: 20px;
+        vertical-align: middle;
+        background-color: rgb(150, 20, 50);
+        font-family: Palatino Linotype;
+        color: white;
+    }
+    span {
+        color: red;
+        font-size: 20px;
+    }
+    .campo {
+        margin: 15px;
+        padding: 0px;
+        display: block;
+        max-width: 100%;
+        font-family: Palatino Linotype;
+    }
+    label {
+        margin: 5px;
+        padding: 0px;
+        display: inline-block;
+        width: 25%;
+        text-align: right;
+        vertical-align: middle;
+        font-weight: bold;
+        font-family: Palatino Linotype;
+    }
+    /*************************************************
+	Estilo de fieldset CAMPO1
+	*************************************************/
+    .campo1 input {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 60%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    textarea {
+        width: 60%;
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        resize: none;
+        border-bottom-color: rgb(238, 238, 238);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-style: inset;
+        border-bottom-width: 2px;
+        border-image-outset: 0px;
+        border-image-repeat: stretch;
+        border-image-slice: 100%;
+        border-image-source: none;
+        border-image-width: 1;
+        border-left-color: rgb(238, 238, 238);
+        border-left-style: inset;
+        border-left-width: 2px;
+        border-right-color: rgb(238, 238, 238);
+        border-right-style: inset;
+        border-right-width: 2px;
+        border-top-color: rgb(238, 238, 238);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-top-style: inset;
+        border-top-width: 2px;
+    }
+    /*************************************************
+	Estilo de fieldset CAMPO2
+	*************************************************/
+    .campo2 input[type=text] {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 49%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    .campo2 input[type=checkbox] {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        text-align: left;
+        display: inline-block;
+    }
+    .campo2 select {
+        margin: 0px;
+        padding: 5px;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .campo2 input[type=number] {
+        margin: 0px;
+        padding: 5px;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        display: inline-block;
+        width: 28%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .campo2 input[type=radio] {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        display: inline-block;
+    }
+    .campo2 input[type=email] {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 49%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    .categoriaAssunto {
+        float: right;
+        max-width: 100%;
+        width: 15%;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .categoriaAssunto a {
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid rgb(150, 20, 50);
+        border-radius: 20px;
+        display: inline-block;
+        color: rgb(150, 20, 50);
+        text-decoration: none;
+        text-align: center;
+    }
+    .categoriaAssunto a:active {
+        border: 2px solid red;
+        color: red;
+    }
+    /*************************************************
+	Estilo de fieldset CAMPO3
+	*************************************************/
+    .campo3 input {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 50%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    .campo3 select {
+        margin: 0px;
+        padding: 5px;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .campo3 nav {
+        margin: 0px;
+        padding: 5px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .campo3 nav a {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        vertical-align: middle;
+        border: 2px solid rgb(150, 20, 50);
+        border-radius: 10px;
+        font-family: Palatino Linotype;
+        font-size: 16px;
+        color: rgb(150, 20, 50);
+    }
+    .campo3 nav a:active {
+        border: 2px solid red;
+        color: red;
+    }
+    /*******************************************************
+	Definir o estilo geral do BOTÃO
+	*******************************************************/
+    .botao {
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 100%;
+        max-height: 100%;
+        text-align: center;
+        vertical-align: middle;
+        color: black;
+        background-color: white;
+        font-family: Palatino Linotype;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 20px;
+        position: relative;
+        display: block;
+        flex: 1;
+        text-decoration: none;
+    }
+    .botao:active {
+        color: red;
+        text-decoration: none;
+    }
+
+    /*******************************************************
+        Definir o estilo do texto da aba "Sobre"
+    *******************************************************/
+
+    .sobre{
+        text-align: justify;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .second-footer{
+        text-align: center;
+    }
+
+
+}
+
+@media only screen and (max-width: 720px) {
+    /*******************************************************
+	Definir o estilo geral do CORPO do FICAT 2.0
+	*******************************************************/
+    body {
+        background-image: url("http://bcficat.ufpa.br/ficat_background.jpg");
+        background-size: 200px;
+    }
+    .container {
+        margin: auto;
+        width: 100%;
+    }
+    /*******************************************************
+	Definir o estilo das IMAGENS de TOPO e FUNDO
+	*******************************************************/
+    img {
+        margin: auto;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+    /*******************************************************
+	Definir o estilo do MENU que fica acima do formulário
+	*******************************************************/
+    .navResponsive,
+    a,
+    i {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        text-align: right;
+    }
+    .navResponsive a {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 20px;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        color: rgb(150, 20, 50);
+    }
+    .navegacao {
+        display: none;
+        margin: 10px;
+        padding: 0px;
+        max-width: 100%;
+        position: relative;
+        height: auto;
+    }
+    .navegacao a:active,
+    .navResponsive a:active {
+        color: red;
+    }
+    .menu {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+        border-top: 1px solid rgb(150, 20, 50);
+    }
+    .menu li {
+        flex: 1;
+        text-align: left;
+        vertical-align: middle;
+        margin: 0px;
+        padding: 0px;
+    }
+    .menu li a {
+        font-family: Palatino Linotype;
+        text-align: center;
+        display: inline-block;
+        margin: 0px;
+        padding: 15px;
+        color: black;
+        position: relative;
+        vertical-align: middle;
+        max-width: 100%;
+    }
+    .menu li a i {
+        color: rgb(150, 20, 50);
+        vertical-align: middle;
+        padding-right: 5px;
+    }
+    .submenu {
+        display: none;
+        list-style-type: none;
+    }
+    /*******************************************************
+	Definir o estilo do FORMULÁRIO
+	*******************************************************/
+    form {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        max-width: 100%;
+        display: block-flex;
+        flex: 1;
+    }
+    fieldset {
+        margin: 0px;
+        padding: 0px;
+        border: 1px solid rgb(150, 20, 50);
+        border-radius: 20px;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    legend {
+        margin: 5px;
+        padding: 10px;
+        border-radius: 20px;
+        vertical-align: middle;
+        background-color: rgb(150, 20, 50);
+        font-family: Palatino Linotype;
+        color: white;
+    }
+    span {
+        color: red;
+        font-size: 20px;
+    }
+    .campo {
+        margin: 15px;
+        padding: 0px;
+        display: block;
+        max-width: 100%;
+        font-family: Palatino Linotype;
+    }
+    label {
+        margin: 5px;
+        padding: 0px;
+        display: inline-block;
+        width: 25%;
+        text-align: right;
+        vertical-align: middle;
+        font-weight: bold;
+        font-family: Palatino Linotype;
+    }
+    /*************************************************
+	Estilo de fieldset CAMPO1
+	*************************************************/
+    .campo1 input {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 60%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    textarea {
+        width: 60%;
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        resize: none;
+        border-bottom-color: rgb(238, 238, 238);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-style: inset;
+        border-bottom-width: 2px;
+        border-image-outset: 0px;
+        border-image-repeat: stretch;
+        border-image-slice: 100%;
+        border-image-source: none;
+        border-image-width: 1;
+        border-left-color: rgb(238, 238, 238);
+        border-left-style: inset;
+        border-left-width: 2px;
+        border-right-color: rgb(238, 238, 238);
+        border-right-style: inset;
+        border-right-width: 2px;
+        border-top-color: rgb(238, 238, 238);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-top-style: inset;
+        border-top-width: 2px;
+    }
+    /*************************************************
+	Estilo de fieldset CAMPO2
+	*************************************************/
+    .campo2 input[type=text] {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 49%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    .campo2 input[type=checkbox] {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        text-align: left;
+        display: inline-block;
+    }
+    .campo2 select {
+        margin: 0px;
+        padding: 5px;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .campo2 input[type=number] {
+        margin: 0px;
+        padding: 5px;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        display: inline-block;
+        width: 28%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .campo2 input[type=radio] {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        display: inline-block;
+    }
+    .categoriaAssunto {
+        float: right;
+        max-width: 100%;
+        width: 20%;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .categoriaAssunto a {
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid rgb(150, 20, 50);
+        border-radius: 20px;
+        display: inline-block;
+        color: rgb(150, 20, 50);
+        text-decoration: none;
+        text-align: center;
+    }
+    .categoriaAssunto a:active {
+        border: 2px solid red;
+        color: red;
+    }
+    /*************************************************
+	Estilo de fieldset CAMPO3
+	*************************************************/
+    .campo3 input {
+        margin: 5px;
+        padding: 5px;
+        display: inline-block;
+        width: 50%;
+        text-align: left;
+        vertical-align: middle;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+    }
+    .campo3 select {
+        margin: 0px;
+        padding: 5px;
+        font-family: Palatino Linotype;
+        border-radius: 10px;
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .campo3 nav {
+        margin: 0px;
+        padding: 5px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .campo3 nav a {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        vertical-align: middle;
+        border: 2px solid rgb(150, 20, 50);
+        border-radius: 10px;
+        font-family: Palatino Linotype;
+        font-size: 16px;
+        color: rgb(150, 20, 50);
+    }
+    .campo3 nav a:active {
+        border: 2px solid red;
+        color: red;
+    }
+    /*******************************************************
+	Definir o estilo geral do BOTÃO
+	*******************************************************/
+    .botao {
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 100%;
+        max-height: 100%;
+        text-align: center;
+        vertical-align: middle;
+        color: black;
+        background-color: white;
+        font-family: Palatino Linotype;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 20px;
+        position: relative;
+        display: block;
+        flex: 1;
+        text-decoration: none;
+    }
+    .botao:active {
+        color: red;
+        text-decoration: none;
+    }
+
+    /*******************************************************
+        Definir o estilo do texto da aba "Sobre"
+    *******************************************************/
+
+    .sobre{
+        text-align: justify;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .second-footer{
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,614 @@
+/*******************************************************
+    Definir o estilo das opções de Agendamento
+*******************************************************/
+
+/* Definição de fonte dos botões e box-info
+------------------------------------------------------------------------*/
+@font-face {
+     font-family: Carter One;
+     src: url('CarterOne.ttf');
+}
+
+/* Ajustes tags principais
+------------------------------------------------------------------------*/
+
+body {
+    background: url('bg normaliza.png');
+    font-size: 1.8rem!important;
+}
+
+footer {
+    background: #1d1d1b;
+    color: #fff;
+    padding: 50px 10%;
+    width: 100%
+    bottom: 0px!important;
+    border-top: 6px solid #e62f29;
+    font-size: 1.2rem;
+}
+
+
+/* Ajustes para rediomensionamento
+------------------------------------------------------------------------*/
+@media screen and (max-width: 768px){
+    .main-inner {
+        max-width: 700px!important;
+        margin:10px auto 60px auto!important;
+    }
+}
+@media screen and (max-width: 425px) and (min-width: 375px){
+    .main-inner {
+        max-width: 390px!important;
+        margin:10px auto 60px auto!important;
+    }
+    #normaliza_img {
+        width:60%!important;
+        margin: 0px 10%!important;
+    }
+    #login {
+        float:left!important;
+        margin: 10px 40% 30px 40%!important;
+        display: block!important;
+    }
+
+}
+
+/* Ajustes para a seleção colorida do mouse
+------------------------------------------------------------------------*/
+::-moz-selection {
+background:#e62f29;
+color:#fff;
+}
+::selection {
+background:#e62f29;
+color:#fff;
+}
+
+/* Caixinhas de horários
+------------------------------------------------------------------------*/
+.timebox{
+    height:30px;
+    width: 50px;
+    background-color: aliceblue;
+    float:left;
+    margin: 10px 5px 0 0;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 3px;
+    cursor:pointer;
+}
+#time_box{
+    margin-left: 2%;
+    margin-right: 22%;
+}
+
+/* Ajustes para o logotipo
+------------------------------------------------------------------------*/
+#normaliza_img {
+    width: 50%;
+    margin: -4% 0 -1% 25%;
+}
+
+/* Ícones para numeração de passos
+------------------------------------------------------------------------*/
+.identificadorPasso {
+    background: #1d1d1b;
+    color:#fff;
+    font-family: 'Carter One';
+    font-size: 1.8rem!important;
+    display: inline;
+    border-radius: 100%;
+    float: left;
+    border-right: 2px solid #e62f29!important;
+    border-bottom: 3px solid #e62f29!important;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    text-shadow: #e62f29 2px 1px;
+    padding: 5px 5px 0px 5px
+}
+
+/* Main
+------------------------------------------------------------------------*/
+.main-inner {
+    max-width: 1200px!important;
+    min-width: auto;
+    margin: 10px auto 60px auto!important;
+    padding: 0px 7%;
+
+}
+.main-footer {
+    margin: 10px 10% 0px 10%;
+    display: inline-block;
+    width: 80%;
+    background: #1d1d1b;
+}
+
+/* Estilos para os botões
+------------------------------------------------------------------------*/
+.btn-primary:hover {
+    background-color: #af2520!important;
+    transition-timing-function: ease-in-out;
+}
+.btn-primary, #confirma {
+    transform: skewY(-1deg);
+    background: #1d1d1b!important;
+    border-radius: 2px !important;
+    color:#fff;
+    font-family: 'Carter One';
+    font-size: 1.9rem!important;
+    display: inline;
+    border-right: 2px solid #e62f29!important;
+    border-bottom: 3px solid #e62f29!important;
+    border-top: none!important;
+    border-left: none!important;
+    margin-bottom: 40px!important;
+}
+
+/* Separador de campos no formulário
+------------------------------------------------------------------------*/
+.form-separate {
+    margin-bottom: 10px !important;
+    padding: 0px 20px;
+    font-size: 1.4rem;
+}
+/* Caixa de mensagem
+------------------------------------------------------------------------*/
+.info-box {
+    font-family: 'Carter One';
+    font-size: 1.8rem!important;
+    padding: 10px 0 20px 0;
+    text-align: justify;
+}
+
+/* Caixa de mensagem que acompanha o indicador numérico
+------------------------------------------------------------------------*/
+.info-aux {
+    padding: 5px;
+    display: inline-block;
+    font-family: 'Carter One';
+    font-size: 1.7rem!important;
+    margin-bottom: 10px;
+}
+
+/* Div para confirmação de agendamento
+------------------------------------------------------------------------*/
+#confirmar_agendamento{
+    display: none;
+    padding-top: 5%;
+}
+
+/* Forms - Checkbox
+------------------------------------------------------------------------*/
+
+.control {
+    font-size: 15px;
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #e6e6e6;
+    border:1px solid #9C9C9C;
+    border-radius:3px;
+}
+
+.control--radio .control__indicator {
+    border-radius: 50%;
+}
+
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+    background: #ccc;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+background: #e62f29;
+border:1px solid #af211c;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+    background: #af211c;
+    border:1px solid #e62f29;
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+    pointer-events: none;
+    opacity: .6;
+    background: #e6e6e6;
+}
+
+/* Check mark */
+.control__indicator:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+    display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+    top: 1px;
+    left: 5px;
+    width: 7px;
+    height: 12px;
+    transform: rotate(45deg);
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+}
+
+/* ======================================================================== */
+/* cartão para mostrar servidores mais ativos na pagina de estatisticas */
+/* ========================================================================== */
+
+@import "https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700";
+@import "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css";
+.container{
+margin-top: 20px;
+}
+.fa-spin-fast {
+-webkit-animation: fa-spin-fast 0.2s infinite linear;
+animation: fa-spin-fast 0.2s infinite linear;
+}
+@-webkit-keyframes fa-spin-fast {
+0% {
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+100% {
+-webkit-transform: rotate(359deg);
+transform: rotate(359deg);
+}
+}
+@keyframes fa-spin-fast {
+0% {
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+100% {
+-webkit-transform: rotate(359deg);
+transform: rotate(359deg);
+}
+}
+.material-card {
+position: relative;
+height: 0;
+padding-bottom: calc(100% - 16px);
+margin-bottom: 6.6em;
+}
+.material-card h2 {
+position: absolute;
+top: calc(100% - 16px);
+left: 0;
+width: 100%;
+padding: 10px 16px;
+color: #fff;
+font-size: 1.4em;
+line-height: 1.6em;
+margin: 0;
+z-index: 10;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+.material-card h2 span {
+display: block;
+}
+.material-card h2 strong {
+font-weight: 400;
+display: block;
+font-size: .8em;
+}
+.material-card h2:before,
+.material-card h2:after {
+content: ' ';
+position: absolute;
+left: 0;
+top: -16px;
+width: 0;
+border: 8px solid;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+.material-card h2:after {
+top: auto;
+bottom: 0;
+}
+@media screen and (max-width: 767px) {
+.material-card.mc-active {
+padding-bottom: 0;
+height: auto;
+}
+}
+.material-card.mc-active h2 {
+top: 0;
+padding: 10px 16px 10px 90px;
+}
+.material-card.mc-active h2:before {
+top: 0;
+}
+.material-card.mc-active h2:after {
+bottom: -16px;
+}
+.material-card .mc-content {
+position: absolute;
+right: 0;
+top: 0;
+bottom: 16px;
+left: 16px;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+.material-card .mc-btn-action {
+position: absolute;
+right: 16px;
+top: 15px;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+border: 5px solid;
+width: 54px;
+height: 54px;
+line-height: 44px;
+text-align: center;
+color: #fff !important;
+cursor: pointer;
+z-index: 20;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+.material-card.mc-active .mc-btn-action {
+top: 62px;
+}
+.material-card .mc-description {
+position: absolute;
+top: 100%;
+right: 30px;
+left: 30px;
+bottom: 54px;
+overflow: hidden;
+opacity: 0;
+filter: alpha(opacity=0);
+-webkit-transition: all 1.2s;
+-moz-transition: all 1.2s;
+-ms-transition: all 1.2s;
+-o-transition: all 1.2s;
+transition: all 1.2s;
+}
+.material-card .mc-footer {
+height: 0;
+overflow: hidden;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+.material-card .mc-footer h4 {
+position: absolute;
+top: 200px;
+left: 30px;
+padding: 0;
+margin: 0;
+font-size: 16px;
+font-weight: 700;
+-webkit-transition: all 1.4s;
+-moz-transition: all 1.4s;
+-ms-transition: all 1.4s;
+-o-transition: all 1.4s;
+transition: all 1.4s;
+}
+.material-card .mc-footer a {
+display: block;
+float: left;
+position: relative;
+width: 52px;
+height: 52px;
+margin-left: 5px;
+margin-bottom: 15px;
+font-size: 28px;
+color: #fff;
+line-height: 52px;
+text-decoration: none;
+top: 200px;
+}
+.material-card .mc-footer a:nth-child(1) {
+-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-ms-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+}
+.material-card .mc-footer a:nth-child(2) {
+-webkit-transition: all 0.6s;
+-moz-transition: all 0.6s;
+-ms-transition: all 0.6s;
+-o-transition: all 0.6s;
+transition: all 0.6s;
+}
+.material-card .mc-footer a:nth-child(3) {
+-webkit-transition: all 0.7s;
+-moz-transition: all 0.7s;
+-ms-transition: all 0.7s;
+-o-transition: all 0.7s;
+transition: all 0.7s;
+}
+.material-card .mc-footer a:nth-child(4) {
+-webkit-transition: all 0.8s;
+-moz-transition: all 0.8s;
+-ms-transition: all 0.8s;
+-o-transition: all 0.8s;
+transition: all 0.8s;
+}
+.material-card .mc-footer a:nth-child(5) {
+-webkit-transition: all 0.9s;
+-moz-transition: all 0.9s;
+-ms-transition: all 0.9s;
+-o-transition: all 0.9s;
+transition: all 0.9s;
+}
+.material-card .img-container {
+overflow: hidden;
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 3;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+.material-card.mc-active .img-container {
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+left: 0;
+top: 12px;
+width: 60px;
+height: 60px;
+z-index: 20;
+}
+.img-responsive{
+max-width: 100%;
+}
+.material-card.mc-active .mc-content {
+padding-top: 5.6em;
+}
+@media screen and (max-width: 767px) {
+.material-card.mc-active .mc-content {
+position: relative;
+margin-right: 16px;
+}
+}
+.material-card.mc-active .mc-description {
+top: 50px;
+padding-top: 5.6em;
+opacity: 1;
+filter: alpha(opacity=100);
+}
+@media screen and (max-width: 767px) {
+.material-card.mc-active .mc-description {
+position: relative;
+top: auto;
+right: auto;
+left: auto;
+padding: 50px 30px 70px 30px;
+bottom: 0;
+}
+}
+.material-card.mc-active .mc-footer {
+overflow: visible;
+position: absolute;
+top: calc(100% - 16px);
+left: 16px;
+right: 0;
+height: 82px;
+padding-top: 15px;
+padding-left: 25px;
+}
+.material-card.mc-active .mc-footer a {
+top: 0;
+}
+.material-card.mc-active .mc-footer h4 {
+top: -32px;
+}
+.material-card.Red h2 {
+background-color: #F44336;
+}
+.material-card.Red h2:after {
+border-top-color: #F44336;
+border-right-color: #F44336;
+border-bottom-color: transparent;
+border-left-color: transparent;
+}
+.material-card.Red h2:before {
+border-top-color: transparent;
+border-right-color: #B71C1C;
+border-bottom-color: #B71C1C;
+border-left-color: transparent;
+}
+.material-card.Red.mc-active h2:before {
+border-top-color: transparent;
+border-right-color: #F44336;
+border-bottom-color: #F44336;
+border-left-color: transparent;
+}
+.material-card.Red.mc-active h2:after {
+border-top-color: #B71C1C;
+border-right-color: #B71C1C;
+border-bottom-color: transparent;
+border-left-color: transparent;
+}
+.material-card.Red .mc-btn-action {
+background-color: #F44336;
+}
+.material-card.Red .mc-btn-action:hover {
+background-color: #B71C1C;
+}
+.material-card.Red .mc-footer h4 {
+color: #B71C1C;
+}
+.material-card.Red .mc-footer a {
+background-color: #B71C1C;
+}
+.material-card.Red.mc-active .mc-content {
+background-color: #FFEBEE;
+}
+.material-card.Red.mc-active .mc-footer {
+background-color: #FFCDD2;
+}
+.material-card.Red.mc-active .mc-btn-action {
+border-color: #FFEBEE;
+}
+body {
+background-color: #ECEFF1;
+color: #37474F;
+font-family: 'Raleway', sans-serif;
+font-weight: 300;
+font-size: 16px;
+}
+h1,
+h2,
+h3 {
+font-weight: 200;
+}
+
+/* fim do cartão para mostrar servidores mais ativos na pagina de estatisticas */

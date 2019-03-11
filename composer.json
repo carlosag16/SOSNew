@@ -1,0 +1,14 @@
+{
+    "autoload":{
+        "files":[
+            "app/functions/caminhos_conf.php",
+            "app/functions/custom.php",
+            "app/functions/pages.php",
+            "app/functions/validate.php",
+            "app/functions/email.php"
+        ]
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}
