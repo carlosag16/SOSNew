@@ -2,7 +2,6 @@
 
 <?php
 //Só funcionou desse, se conseguir resolver avise-me. By Jairo
-require_once('../../app/functions/checkUserDevice.php');
 require_once('../../app/functions/bdq.php');
 require_once('../../bootstrap.php');
 require_once('../../app/functions/percentual.php');

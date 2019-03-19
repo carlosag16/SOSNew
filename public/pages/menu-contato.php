@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <link href="<?php echo CAM_RAIZ_2?>estilo-menu.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1C1C1C">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1C1C1C">
     <link rel="stylesheet" type="text/css" href="<?php echo CAM_RAIZ_2?>fontAwesome/web-fonts-with-css/css/fontawesome-all.min.css">
 
     <script>

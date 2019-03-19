@@ -68,13 +68,13 @@
 <!-- <div class="form-separate">
 	<label for="">Curso/Programa</label> -->
 	<!-- <input type="text" class="form-control" name="course" placeholder="Insira o curso ou programa" value="<?php echo $_SESSION['var_course']?>" required/> -->
-	<!-- <select class="form-control" id="cursos" name="course" value="<?php echo $_SESSION['var_course']?>" y>
+	<!-- <select class="form-control" id="cursos" name="course" value="<?php //echo $_SESSION['var_course']?>" y>
 		<?php
-		$cursos = DBRead("tb_cursos","nome_curso");
-		sort($cursos, SORT_STRING);
-		foreach($cursos as $curso){
-			echo "<option".$_SESSION['var_course'].">$curso</option>";
-		}
+		// $cursos = DBRead("tb_cursos","nome_curso");
+		// sort($cursos, SORT_STRING);
+		// foreach($cursos as $curso){
+		// 	echo "<option".$_SESSION['var_course'].">$curso</option>";
+		// }
 		?>
 	</select>
 </div> -->
@@ -99,17 +99,6 @@
 	?>
 </div>
 
-<!-- Campo de dúvidas -->
-<!--
-<div class="form-separate">
-<label for="">Digite-as no campo abaixo</label>
-<textarea type="text" class="form-control" name="questions" placeholder="Sobre a norma..." required></textarea>
-
-<script>
-document.getElementById("txt_questions").value = "<?php echo $_SESSION['var_questions']?>"
-</script>
-</div>
--->
 <br/><br/>
 
 <!-- Definição do Passo 3: O agendamento -->

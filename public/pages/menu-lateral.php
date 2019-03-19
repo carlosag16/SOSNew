@@ -1,7 +1,9 @@
+<meta name="theme-color" content="#DD4B39">
+<meta name="apple-mobile-web-app-status-bar-style" content="#DD4B39">
 <header class="main-header">
 
 	<!-- Logo -->
-	<a href="#" class="logo" style="position:fixed;">
+	<a href="#" class="logo">
 		<!-- mini logo for sidebar mini 50x50 pixels -->
 		<span class="logo-mini"><b>S</b>CA</span>
 		<!-- logo for regular state and mobile devices -->
@@ -63,7 +65,7 @@
 </header>
 
 <!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar" style="position:fixed;">
+<aside class="main-sidebar">
 	<!-- sidebar: style can be found in sidebar.less -->
 	<section class="sidebar">
 		<!-- Sidebar user panel -->
@@ -85,18 +87,27 @@
 			<!-- <li class="active treeview menu-open"> -->
 			<li class="treeview">
 
-				<a href="<?php echo CAM_PAGES?>admin.php"> <!-- se der bug ver aqui -->
+				<a href="#"> <!-- se der bug ver aqui -->
 					<i class="fa fa-calendar"></i> <span>Agendamentos</span>
-					<span class="pull-right-container">
+						<span class="pull-right-container">
 						<i class="fa fa-angle-left pull-right"></i>
 					</span>
 				</a>
 				<ul class="treeview-menu">
-					<li><a href="admin.php"><i class="fa fa-calendar-o"></i>Ver agendamentos</a></li>
+					<li class="treeview">
+						<a href="efetivos.php"><i class="fa fa-calendar-o"></i> <span>Ver agendamentos</span>
+							<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+							</span>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="efetivos.php">  <i class="fa fa-calendar-plus-o"></i> Efetivos </a></li>
+							<li><a href="concluidos.php"> <i class="fa fa-calendar-check-o"></i> Concluídos </a></li>
+						</ul>
+					</li>
 					<li><a href="<?php echo CAM_RAIZ?>?page=contato"><i class="fa fa-circle-o"></i> Realizar agendamento</a></li>
 				</ul>
 			</li>
-
 			<?php
 			//somente o adm do sistema pode ter acesso a estas opções
 			if($_SESSION['email'] == 'adm.bc.agendamento@gmail.com') {
