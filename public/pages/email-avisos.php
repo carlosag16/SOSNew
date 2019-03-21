@@ -53,7 +53,7 @@ header('Content-Type: text/html; charset=utf-8');
 					<small>Enviar avisos para servidores do sistema</small>
 				</h1>
 				<ol class="breadcrumb">
-					<li><a onclick="javascript: location.href='admin.php';"><i class="fa fa-calendar"></i> Agendamentos</a></li>
+					<li><a onclick="javascript: location.href='admin.php';"><i class="fa fa-dashboard"></i> Painel de controle</a></li>
 					<li class="active">Mensagens</li>
 				</ol>
 			</section>

@@ -64,7 +64,7 @@ header('Content-Type: text/html; charset=utf-8');
 			    }
 					elseif ($acao=="0") {
 						// executará está query quando apertarem em "não compareceu"
-			      DBExecute("UPDATE agd_agendamentos SET agd_nao_compareceu = 1, agd_cancelado = 1, agd_concluido = 1 WHERE agd_id = $agd_id");
+			      DBExecute("UPDATE agd_agendamentos SET agd_nao_compareceu = 1, agd_concluido = 1 WHERE agd_id = $agd_id");
 						// Loop to store and display values of individual checked checkbox.
 						func_cancelamento($agd_id,"Administrador",$session_idServ,$session_cancelado,null,CAM_ADMIN);
 			    }
@@ -78,16 +78,10 @@ header('Content-Type: text/html; charset=utf-8');
 					<small>Ver seus agendamentos</small>
 				</h1>
 				<ol class="breadcrumb">
-					<li><a><i class="fa fa-calendar"></i> Agendamentos</a></li>
-					<!-- <li class="active">Mensagens</li> -->
+					<li><a><i class="fa fa-dashboard"></i> Painel de controle</a></li>
+					<li class="active">Agendamentos efetivos</li>
 				</ol>
 			</section>
-			<!-- ============= IMPORTANDO O DASHBOARD ============= -->
-			<?php
-			if($_SESSION['email'] == 'adm.bc.agendamento@gmail.com'){
-				include_once('dashboard.php');
-			}
-			?>
 			<!-- Main content -->
 			<section class="content">
 				<form action="efetivos.php" method="post">

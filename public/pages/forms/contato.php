@@ -36,7 +36,7 @@ if($captcha){
 
     if($resposta['success'] == true){
         $criada        = date("Y-m-d");
-        
+
         $horario_valor = DBReadOne("hor_horarios","hor_valor","WHERE hor_id = \"$validate->hour\"");
         $horario_ser_id = DBRead("ser_servidores__hor_horarios","ser_id","WHERE hor_id = \"$validate->hour\"");
 
@@ -52,7 +52,7 @@ if($captcha){
                 $frequencia_efetivo[$frequencias[$key]] = $horario_ser_id[$key];
             }
             ksort($frequencia_efetivo);
-            
+
             foreach($frequencia_efetivo as $key=>$value){
                 $horario_ser_id = $value;
                 $key++;
@@ -61,7 +61,7 @@ if($captcha){
                 if(!DBExecute($result_msg_contato)){
                     return redirect('contato','danger','proc_failed');
                 }
-                
+
                 break 1;
             }
         } else {
@@ -74,23 +74,23 @@ if($captcha){
 
             if(!DBExecute($result_msg_contato)){
                 return redirect('contato','danger','proc_failed');
-            }            
+            }
         }
-        
+
         $servidorNome = DBReadOne("ser_servidores","ser_nome","WHERE ser_id = \"$horario_ser_id\"");
         $servidorEmail = DBReadOne("ser_servidores","ser_email","WHERE ser_id = \"$horario_ser_id\"");
 
         $result_msg_contato = "INSERT INTO agd_agendamentos (agd_matricula, agd_nome, agd_email, agd_telefone, agd_curso_programa, agd_data, hor_id, ser_id, agd_criada) VALUES ('$validate->matricula','$validate->name', '$validate->email', '$validate->phone', '$validate->course', '$validate->dateday', '$validate->hour','{$horario_ser_id}', '$criada')";
 
-        
+
         if(!DBExecute($result_msg_contato)){
             return redirect('contato','danger','proc_failed');
         }
- 
+
         $agd_id = mysqli_fetch_array(DBExecute("SELECT agd_id FROM agd_agendamentos WHERE agd_data = \"$validate->dateday\" AND hor_id = \"{$validate->hour}\" AND agd_cancelado = 0"));
 
         $agd_id = $agd_id[0];
-        
+
         $str_questions = "";
 
         foreach($_POST['question'] as $value){
@@ -98,14 +98,14 @@ if($captcha){
             $duvida = DBReadOne("prin_principais_duvidas","prin_duvida","WHERE prin_id = \"$value\"");
             $str_questions .=" ".$duvida.";";
         }
-        
+
         $newDate = new DateTime($validate->dateday);
         $criada = date("d/m/Y H:i:s");
 
         $hora_final = date("H:i", strtotime($horario_valor) + 90*60);
-        
+
         $mensagem = "<strong>Nome:</strong> {$validate->name} <br>
-                        <strong>E-mail:</strong> {$validate->email} <br>                            
+                        <strong>E-mail:</strong> {$validate->email} <br>
                         <strong>Curso/Programa:</strong> {$validate->course} <br>
                         <strong>Principais Dúvidas:</strong> {$str_questions} <br>
                         <strong>Dia do Agendamento:</strong> {$newDate->format('d/m/Y')} <br>
@@ -114,28 +114,32 @@ if($captcha){
                         <strong>E-mail do Instrutor(a):</strong> {$servidorEmail} <br>
                         <strong>Data de Marcação:</strong> {$criada} <br>
                         <strong>Local:</strong> Biblioteca Central -  Campus Belém.<br>
-                        <br>                        
+                        <br>
                         <strong>Código de Cancelamento:</strong> ".base64_encode($agd_id)."<br>
-                        
+
                         <br>
                         <i>No caso de cancelamento, acesse a página do SOS Normaliza. No menu superior, clique em Agenda > Cancelar. Insira seu e-mail e seu Código de Cancelamento. Você também pode clicar no link abaixo para agilizar o processo.</i><br>
                         <br>
-                        
+
                         <a href=\"http://bc.ufpa.br/sosnormaliza/public/?page=cancelar_agendamento_usuario&code=".base64_encode($agd_id)."&id=".base64_encode($validate->email)."\">link para Cancelamento</a><br>
-                        
+
                         <br><br>
-                        <strong>IMPORTANTE:</strong> No dia {$newDate->format('d/m/Y')}, dirija-se ao balcão de Referência na BC preferencialmente com 5 minutos de antecedência. Traga seu material impresso ou no notebook/tablet.
+                        <strong>IMPORTANTE:</strong> No dia {$newDate->format('d/m/Y')}, dirija-se ao balcão de Referência na BC preferencialmente com 5 minutos de antecedência.
                         <br><br>
-                        
+
                         <br>
                         <br>
                         <br>
                         <i>Att <br><br>
+                        <br>
+                        <i>Att <br><br>
                         Equipe Biblioteca Central </i>";
+                        <br>
+                        <img src=\"http://bc.ufpa.br/sosnormaliza/app/sos%20normaliza.png\" alt=\"SOS Normaliza\" style=\"height:200px;width:200px;\">";
 
         $data = [
             'para'         =>[$servidorEmail,$validate->email],
-            'assunto'      =>"Comprovante de agendamento sobre: ".$validate->course,
+            'assunto'      =>"SOS Normaliza: Comprovante de agendamento sobre: ".$validate->course,
             'mensagem'     =>$mensagem
         ];
 
@@ -149,7 +153,7 @@ if($captcha){
             unset($_SESSION['var_question']);
             unset($_SESSION['var_dateday']);
             unset($_SESSION['var_hour']);
-            
+
             return redirect('contato','success','proc_successed');
         } else {
             return redirect('contato','danger','proc_failed');

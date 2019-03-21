@@ -51,11 +51,11 @@ header('Content-Type: text/html; charset=utf-8');
 						<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<h1>
-					Agendamentos
+					Painel de controle
 					<small>Monitorar e controlar seus agendamentos</small>
 				</h1>
 				<ol class="breadcrumb">
-					<li><a onclick="javascript: location.href='admin.php';"><i class="fa fa-calendar"></i> Agendamentos</a></li>
+					<li><a onclick="javascript: location.href='admin.php';"><i class="fa fa-dashboard"></i> Painel de controle</a></li>
 				</ol>
 			</section>
 			<!-- ============= IMPORTANDO O DASHBOARD ============= -->
@@ -107,7 +107,20 @@ header('Content-Type: text/html; charset=utf-8');
 								<a href="profile.php">
 									<span class="info-box-icon bg-red"><i class="fa fa-user"></i></span>
 									<div class="info-box-content">
-										<span class="info-box-text">Estatísticas</span>
+										<span class="info-box-text">Perfil</span>
+										<!-- <span class="info-box-number">1,410</span> -->
+									</div>
+									<!-- /.info-box-content -->
+								</a>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-xs-6">
+							<div class="info-box">
+								<a href="http://bc.ufpa.br/sosnormaliza/public/?page=contato">
+									<span class="info-box-icon bg-yellow"><i class="fa fa-edit"></i></span>
+									<div class="info-box-content">
+										<span class="info-box-text">Agendar</span>
 										<!-- <span class="info-box-number">1,410</span> -->
 									</div>
 									<!-- /.info-box-content -->

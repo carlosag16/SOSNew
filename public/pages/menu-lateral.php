@@ -84,6 +84,7 @@
 		<!-- sidebar menu: : style can be found in sidebar.less -->
 		<ul class="sidebar-menu" data-widget="tree">
 
+			<li><a href="admin.php"><i class="fa  fa-dashboard"></i> <span>Painel de controle</span></a></li>
 			<!-- <li class="active treeview menu-open"> -->
 			<li class="treeview">
 
@@ -95,19 +96,15 @@
 				</a>
 				<ul class="treeview-menu">
 					<li class="treeview">
-						<a href="efetivos.php"><i class="fa fa-calendar-o"></i> <span>Ver agendamentos</span>
-							<span class="pull-right-container">
-							<i class="fa fa-angle-left pull-right"></i>
-							</span>
-						</a>
-						<ul class="treeview-menu">
-							<li><a href="efetivos.php">  <i class="fa fa-calendar-plus-o"></i> Efetivos </a></li>
-							<li><a href="concluidos.php"> <i class="fa fa-calendar-check-o"></i> Concluídos </a></li>
-						</ul>
+						<li><a href="efetivos.php">  <i class="fa fa-calendar-plus-o"></i> Efetivos </a></li>
+						<li><a href="concluidos.php"> <i class="fa fa-calendar-check-o"></i> Concluídos </a></li>
 					</li>
-					<li><a href="<?php echo CAM_RAIZ?>?page=contato"><i class="fa fa-circle-o"></i> Realizar agendamento</a></li>
 				</ul>
 			</li>
+
+			<li><a href="<?php echo CAM_RAIZ?>?page=contato"><i class="fa fa-edit"></i> Realizar agendamento</a></li>
+			<li><a href="http://bc.ufpa.br/sosnormaliza-teste/public/?page=cancelar_agendamento_usuario"><i class="fa  fa-calendar-times-o"></i> Cancelar agendamento</a></li>
+
 			<?php
 			//somente o adm do sistema pode ter acesso a estas opções
 			if($_SESSION['email'] == 'adm.bc.agendamento@gmail.com') {

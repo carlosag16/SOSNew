@@ -63,16 +63,10 @@ header('Content-Type: text/html; charset=utf-8');
 					<small>Seus dados pessoais</small>
 				</h1>
 				<ol class="breadcrumb">
-					<li><a onclick="javascript: location.href='admin.php';"><i class="fa fa-calendar"></i> Agendamentos</a></li>
+					<li><a onclick="javascript: location.href='admin.php';"><i class="fa fa-dashboard"></i> Painel de controle</a></li>
 					<li class="active">Perfil</li>
 				</ol>
 			</section>
-			<!-- ============= IMPORTANDO O DASHBOARD ============= -->
-			<?php
-			if($_SESSION['email'] == 'adm.bc.agendamento@gmail.com'){
-				include_once('dashboard.php');
-			}
-			?>
 			<!-- ================================================= -->
 			<!-- Main content -->
 			<section class="content">

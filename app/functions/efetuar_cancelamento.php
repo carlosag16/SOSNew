@@ -59,18 +59,18 @@
             if($session_cancelado==0){
                 if(($agd_data->format('Y-m-d') == $hoje) and (date("H:i")>$horaValor)){
 
-                    $data['mensagem'] = "Informamos que seu agendamento foi cancelado, porque você não apareceu no horário determinado. Por favor, seja mais atencioso e pontual com seus compromissos. <br> <br>".$mensagem;
+                    $data['mensagem'] = "Informamos que seu agendamento foi cancelado. Para mais informações, contate o servidor responsável. <br> <br>".$mensagem;
 
-                    $data['assunto'] = "Aviso de Falta: Agendamento BC.";
+                    $data['assunto'] = "SOS Normaliza: Aviso de Falta: Agendamento BC.";
 
                     if(!send($data)){
                        return header("location:".$caminho."?status=danger&cancelado={$session_cancelado}&type_message=anymessage&message=O apenas o envio do email de cancelamento foi feito com falha.");
                     }
                 } else {
 
-                    $data['mensagem'] = "Informamos que seu agendamento foi cancelado. Para mais informações, contate o servidor responsável. <br> <br>".$mensagem;
+                  $data['mensagem'] = "Informamos que seu agendamento foi cancelado. Para mais informações, contate o servidor responsável. <br> <br>".$mensagem;
 
-                    $data['assunto'] = "Aviso de Cancelamento de seu Agendamento BC.";
+                    $data['assunto'] = "SOS Normaliza: Aviso de Cancelamento de seu Agendamento BC.";
 
                     if(!send($data)){
                        return header("location:".$caminho."?status=danger&cancelado={$session_cancelado}&type_message=anymessage&message=O apenas o envio do email de cancelamento foi feito com falha.");
@@ -81,7 +81,7 @@
 
                 $data['mensagem'] = "Informamos que seu agendamento foi reativado. Para mais informações, contate o servidor responsável. <br> <br>".$mensagem;
 
-                $data['assunto'] = "Aviso de reativação de seu Agendamento BC.";
+                $data['assunto'] = "SOS Normaliza: Aviso de reativação de seu Agendamento BC.";
 
                 if(!send($data)){
                    return header("location:".$caminho."?status=danger&cancelado={$session_cancelado}&type_message=anymessage&message=O apenas o envio do email de descancelamento foi feito com falha.");
