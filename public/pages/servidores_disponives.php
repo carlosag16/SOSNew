@@ -41,7 +41,7 @@ header('Content-Type: text/html; charset=utf-8');
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
-<body class="hold-transition skin-red sidebar-mini">
+<body class="hold-transition skin-red fixed sidebar-mini">
 	<div class="wrapper">
 		<!-- =================== MEU LATERAL FICA AQUI =============== -->
 		<?php include_once('menu-lateral.php') ?>
@@ -54,10 +54,12 @@ header('Content-Type: text/html; charset=utf-8');
 					$id = $_POST['estado_servidor'];
 					$estado = DBReadOne("ser_servidores","ser_ativo"," WHERE ser_id = {$id}");
 					if ($estado=='0'){
+						// para desativar o servidor
 						DBExecute("UPDATE ser_servidores SET ser_ativo = 1 WHERE ser_id = {$id};");
 						DBExecute("DELETE from ser_servidores__hor_horarios WHERE ser_id = {$id};");
 					}
 					else{
+						// para ativar o servidor
 						DBExecute("UPDATE ser_servidores SET ser_ativo = 0 WHERE ser_id = {$id};");
 					}
 				}

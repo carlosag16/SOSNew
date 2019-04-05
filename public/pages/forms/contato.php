@@ -129,13 +129,9 @@ if($captcha){
 
                         <br>
                         <br>
-                        <br>
-                        <i>Att <br><br>
-                        <br>
+                        <img src=\"http://bc.ufpa.br/sosnormaliza/app/sos%20normaliza.png\" alt=\"SOS Normaliza\" style=\"height:200px;width:200px;\">
                         <i>Att <br><br>
                         Equipe Biblioteca Central </i>";
-                        <br>
-                        <img src=\"http://bc.ufpa.br/sosnormaliza/app/sos%20normaliza.png\" alt=\"SOS Normaliza\" style=\"height:200px;width:200px;\">";
 
         $data = [
             'para'         =>[$servidorEmail,$validate->email],

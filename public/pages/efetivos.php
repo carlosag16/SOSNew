@@ -42,7 +42,7 @@ header('Content-Type: text/html; charset=utf-8');
 
 </head>
 
-<body class="hold-transition skin-red sidebar-mini">
+<body class="hold-transition skin-red fixed sidebar-mini">
   <!-- =================== MEU LATERAL FICA AQUI =============== -->
   <?php include_once('menu-lateral.php') ?>
   <!-- ================================================================ -->

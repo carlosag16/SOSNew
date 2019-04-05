@@ -14,7 +14,7 @@
             }
 
             if($session_cancelado==0){//Se estiver descancelado, cancela. Caso contrário, descancela.
-                 DBExecute("UPDATE agd_agendamentos SET agd_cancelado= 1, agd_concluido = 1 WHERE agd_id = ".$selected);
+                 DBExecute("UPDATE agd_agendamentos SET agd_cancelado= 1, agd_concluido = 1, agd_nao_compareceu = 1  WHERE agd_id = ".$selected);
             } else {
                  DBExecute("UPDATE agd_agendamentos SET agd_cancelado=0 WHERE agd_id = $selected");
             }

@@ -42,7 +42,7 @@ header('Content-Type: text/html; charset=utf-8');
 
 </head>
 
-<body class="hold-transition skin-red sidebar-mini">
+<body class="hold-transition skin-red fixed sidebar-mini">
   <!-- =================== MEU LATERAL FICA AQUI =============== -->
   <?php include_once('menu-lateral.php') ?>
   <!-- ================================================================ -->
@@ -146,7 +146,7 @@ header('Content-Type: text/html; charset=utf-8');
 												*/
 												if($nao_compareceu[$i]==1){
 													// echo '<td>'.$nao_compareceu[$i].'<center></td>';
-													echo '<td><center><span class="badge warning">Não compareceu</span><center></td>';
+													echo '<td><center><span class="badge danger">Não compareceu</span><center></td>';
 												}elseif ($cancelou[$i]==1){
 													echo '<td><center><span class="badge danger">Cancelou</span><center></td>';
 												}else{

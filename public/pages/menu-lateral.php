@@ -102,8 +102,8 @@
 				</ul>
 			</li>
 
-			<li><a href="<?php echo CAM_RAIZ?>?page=contato"><i class="fa fa-edit"></i> Realizar agendamento</a></li>
-			<li><a href="http://bc.ufpa.br/sosnormaliza-teste/public/?page=cancelar_agendamento_usuario"><i class="fa  fa-calendar-times-o"></i> Cancelar agendamento</a></li>
+			<li><a href="<?php echo CAM_RAIZ?>?page=contato"><i class="fa fa-edit"></i> <span>Realizar agendamento</span></a></li>
+			<li><a href="http://bc.ufpa.br/sosnormaliza/public/?page=cancelar_agendamento_usuario"><i class="fa  fa-calendar-times-o"></i> <span>Cancelar agendamento</span></a></li>
 
 			<?php
 			//somente o adm do sistema pode ter acesso a estas opções
@@ -129,7 +129,8 @@
 			?>
 
 			<!-- <li><a href="<?php echo CAM_RAIZ;?>?page=estatistica"><i class="fa fa-line-chart"></i> <span>Estatísticas</span></a></li> -->
-			<li><a href="estatistica.php"><i class="fa fa-line-chart"></i> <span>Estatísticas</span></a></li>
+			<!-- adicionei as estatítica no dashboard -->
+			<!-- <li><a href="estatistica.php"><i class="fa fa-line-chart"></i> <span>Estatísticas</span></a></li> -->
 
 			<li class="header">OUTROS</li>
 
