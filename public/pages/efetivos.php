@@ -13,7 +13,7 @@ if($_SESSION['id'] == 4){
 else{
   $ser_id = $_SESSION['id'];
 }
-$add_ser_id = $ser_id == 4 ? "" : "AND ser_id = ".$ser_id;
+$add_ser_id = $ser_id == 4 ? ";" : " AND ser_id = ".$ser_id;
 ?>
 
 <!DOCTYPE html>
