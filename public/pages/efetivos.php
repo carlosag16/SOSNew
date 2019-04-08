@@ -1,5 +1,3 @@
-
-
 <?php
 require_once('../../app/functions/bdq.php');
 require_once('../../app/functions/efetuar_cancelamento.php');
@@ -8,6 +6,14 @@ require_once('../../bootstrap.php');
 session_start();
 if($_SESSION['id'] == NULL){redirect("login","danger","unset_login");}
 header('Content-Type: text/html; charset=utf-8');
+
+if($_SESSION['id'] == 4){
+  $ser_id = 4;
+}
+else{
+  $ser_id = $_SESSION['id'];
+}
+$add_ser_id = $ser_id == 4 ? "" : "AND ser_id = ".$ser_id;
 ?>
 
 <!DOCTYPE html>
@@ -143,23 +149,23 @@ header('Content-Type: text/html; charset=utf-8');
 											// pega o dia presente
 											$hoje = Date('Y-m-d');
 											//pegar id do agendamento
-											$id = DBRead("agd_agendamentos","agd_id","WHERE agd_concluido = 0 AND agd_cancelado = 0 AND ser_id = ".$_SESSION['id']);
+											$id = DBRead("agd_agendamentos","agd_id","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 											//pega número de matrícula do usuário
-											$matricula = DBRead("agd_agendamentos","agd_matricula","WHERE agd_concluido = 0 AND agd_cancelado = 0 AND ser_id = ".$_SESSION['id']);
+											$matricula = DBRead("agd_agendamentos","agd_matricula","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 											// pega o nome do usuário
-											$nome = DBRead("agd_agendamentos","agd_nome","WHERE agd_concluido = 0 AND agd_cancelado = 0 AND ser_id = ".$_SESSION['id']);
+											$nome = DBRead("agd_agendamentos","agd_nome","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 											// pega o email do usuário
-											$email = DBRead("agd_agendamentos","agd_email","WHERE agd_concluido = 0 AND agd_cancelado = 0 AND ser_id = ".$_SESSION['id']);
+											$email = DBRead("agd_agendamentos","agd_email","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 											// pega o telefone do usuário
-											$telefone = DBRead("agd_agendamentos","agd_telefone","WHERE agd_concluido = 0 AND agd_cancelado = 0 AND ser_id = ".$_SESSION['id']);
+											$telefone = DBRead("agd_agendamentos","agd_telefone","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 											// pega a data marcada do agendamento
-											$datas = DBRead("agd_agendamentos","agd_data","WHERE agd_concluido = 0 AND agd_cancelado = 0 AND ser_id = ".$_SESSION['id']);
+											$datas = DBRead("agd_agendamentos","agd_data","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 											// pega a hora marcada do agendamento
-											$horas = DBRead("agd_agendamentos","hor_id","WHERE agd_concluido = 0 AND agd_cancelado = 0 AND ser_id = ".$_SESSION['id']);
+											$horas = DBRead("agd_agendamentos","hor_id","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 											// pega o curos do usuário
-											$curso = DBRead("agd_agendamentos","agd_curso_programa","WHERE agd_concluido = 0 AND agd_cancelado = 0 AND ser_id = ".$_SESSION['id']);
+											$curso = DBRead("agd_agendamentos","agd_curso_programa","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 											// pega a data em que foi aberta a solicitação de agendamento
-											$criadas = DBRead("agd_agendamentos","agd_criada","WHERE agd_concluido = 0 AND agd_cancelado = 0 AND ser_id = ".$_SESSION['id']);
+											$criadas = DBRead("agd_agendamentos","agd_criada","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 
 											/*Esse for irá gerar as linha da tabela onde cada coluna terá as informações recuperadas do banco de dados acima.*/
 											for ($i=0; $i < count($nome); $i++) {
