@@ -7,7 +7,7 @@ require_once('../../bootstrap.php');
 require_once('../../app/functions/percentual.php');
 
 session_start();
-if($_SESSION['id'] == NULL || $_SESSION['email'] != 'adm.bc.agendamento@gmail.com'){redirect("login","danger","unset_login");}
+if($_SESSION['id'] == NULL || $_SESSION['email'] != 'suporte.sedepti@gmail.com'){redirect("login","danger","unset_login");}
 ini_set('default_charset','UTF-8');
 $conn = DBConnect();
 $result = mysqli_query($conn,$sql);
@@ -90,9 +90,10 @@ header('Content-Type: text/html; charset=utf-8');
 	              <th scope="col">Nome</th>
                 <th scope="col">9h30</th>
                 <th scope="col">11h00</th>
-                <th scope="col">12h30</th>
-                <th scope="col">16h00</th>
-                <th scope="col">17h30</th>
+								<th scope="col">12h30</th>
+                <th scope="col">14h30</th>
+                <th scope="col">16h30</th>
+                <th scope="col">18h00</th>
 	              <th scope="col">19h00</th>
 	            </tr>
 	          </thead>
@@ -106,7 +107,7 @@ header('Content-Type: text/html; charset=utf-8');
                 foreach ($servidores_ativos as $id) {
                   $nome = DBRead("ser_servidores","ser_nome","WHERE ser_id=".$id.";");
 									$horario = DBRead("ser_servidores__hor_horarios","hor_id","WHERE ser_id=".$id.";");
-                  $h = array_fill(1,6,0); //Array ( [1] => 0 [2] => 0 [3] => 0 [4] => 0 [5] => 0 [6] => 0 )
+                  $h = array_fill(1,7,0); //Array ( [1] => 0 [2] => 0 [3] => 0 [4] => 0 [5] => 0 [6] => 0 )
                   foreach ($horario as $key => $value) {
                     if (array_key_exists($value,$h)) { // pondo cada hor_id de acordo com o indice do $h, ex: Array ( [1] => 1 [2] => 0 [3] => 3 [4] => 0 [5] => 5 [6] => 0 )
                       $h[$value] = $value;

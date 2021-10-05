@@ -18,7 +18,7 @@
 </div>-->
 
 <div class="info-box">
-	Tem trabalho para entregar e as dúvidas sobre a formatação não param de aparecer? Calma! O SOS Normaliza BC te ajuda! Agende um horário conosco e esclareça suas dúvidas presencialmente!
+	Tem trabalho para entregar e as dúvidas sobre a formatação não param de aparecer? Calma! O SOS Normaliza BC te ajuda! Agende um horário conosco e esclareça suas dúvidas!
 
 </div>
 
@@ -108,9 +108,21 @@
 </div>
 
 <br><br>
+<!-- definição do passo 4 -->
+<div class="identificadorPasso">4</div>
+<div class="info-aux">Escolha se será presencial ou online</div>
+<div class="form-separate">
+<label>Presencial ou online</label>
+<select required class="form-control>
+<option value="online">Online</option>
+<option value="presencial">Presencial</option>
+<option value="online">Online</option>
+</select>
+</div>
+<br><br>
 
-<!-- Definição do Passo 4 -->
-<div class="identificadorPasso">4</div> <div class="info-aux">Valide o re-CAPTCHA</div><br/>
+<!-- Definição do Passo 5 -->
+<div class="identificadorPasso">5</div> <div class="info-aux">Valide o re-CAPTCHA</div><br/>
 <div class="form-separate">
 	<!-- Gerador do re-CAPTCHA -->
 	<div class="g-recaptcha" data-sitekey="6LeeUVYUAAAAAIHHqk_bg6qXdnYbRMmx6OMSeYiV"></div>

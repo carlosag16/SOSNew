@@ -9,10 +9,10 @@ function send(array $data) {
     $email->Host = 'smtp.gmail.com';
     $email->Port = 465;
     $email->SMTPAuth = true;
-    $email->Username = 'adm.bc.agendamento@gmail.com'; //para fazer login no email.
+    $email->Username = 'sosnormalizabc@gmail.com'; //para fazer login no email.
     $email->Password = '@gend@2018ADM'; //senha do email.
     $email->isHTML(true);
-    $email->setFrom('adm.bc.agendamento@gmail.com'); //Quem envia o e-mail.
+    $email->setFrom('sosnormalizabc@gmail.com'); //Quem envia o e-mail.
     $email->FromName = utf8_decode('Administração de Agendamentos da BC-UFPA'); //nome de quem envia o email.
     
     foreach($data['para'] as $value){$email->addAddress($value);}; //Destinatários dos e-mails

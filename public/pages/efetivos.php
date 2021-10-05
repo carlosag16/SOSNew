@@ -137,6 +137,11 @@ $add_ser_id = $ser_id == 4 ? ";" : " AND ser_id = ".$ser_id;
 	                    <th>Horário</th>
 											<th>Curso/Programa</th>
 											<th>Criada em</th>
+                      <?php
+                        if($ser_id == 4){
+                          echo '<th>Servidor</th>';
+                        }
+                      ?>
 	                    <th>Estado</th>
 	                  </tr>
 									</thead>
@@ -166,6 +171,12 @@ $add_ser_id = $ser_id == 4 ? ";" : " AND ser_id = ".$ser_id;
 											$curso = DBRead("agd_agendamentos","agd_curso_programa","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
 											// pega a data em que foi aberta a solicitação de agendamento
 											$criadas = DBRead("agd_agendamentos","agd_criada","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
+                      //para pegar o servidor que ira atender a solicitação (so o adm pode ver isso)
+                      $_ids = DBRead("agd_agendamentos","ser_id","WHERE agd_concluido = 0 AND agd_cancelado = 0".$add_ser_id.";");
+                      $ser_nome = array();
+                      foreach ($_ids as $_id) {
+                        array_push($ser_nome, DBReadOne("ser_servidores","ser_nome","WHERE ser_id = {$_id};"));
+                      }
 
 											/*Esse for irá gerar as linha da tabela onde cada coluna terá as informações recuperadas do banco de dados acima.*/
 											for ($i=0; $i < count($nome); $i++) {
@@ -182,6 +193,9 @@ $add_ser_id = $ser_id == 4 ? ";" : " AND ser_id = ".$ser_id;
 												echo '<td>'.$hora.'</td>';
 												echo '<td>'.$curso[$i].'</td>';
 												echo '<td>'.$criada->format("d/m/Y").'</td>';
+                        if($ser_id == 4){
+                          echo '<td>'.$ser_nome[$i].'</td>';
+                        }
 												/* Essa condição é necessária para que seja possível analisar o estado do agendamento:
 													Se a data do agendamento for menor que o dia atual então mostrar que o agendamento está expirado, se for igual mostrar que
 													é hoje, se for maior mostrará que está aguardando.

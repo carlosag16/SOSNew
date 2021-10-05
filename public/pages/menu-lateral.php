@@ -51,7 +51,7 @@
 								<a href="profile.php" class="btn btn-default btn-flat">Perfil</a>
 							</div>
 							<div class="pull-left">
-								<a href="https://docs.google.com/presentation/d/17Huq49eHXC4f7llAxJo8bQCnsVGMXroTDAk9j1zSzLw/edit#slide=id.p" class="btn btn-default btn-flat" target="_blank">Ajuda</a>
+								<a href="https://docs.google.com/presentation/d/137rIvwXKnt5HpSXuNqkkhEPa49eN-IgFNmAekJOlBvI/edit?usp=sharing" class="btn btn-default btn-flat" target="_blank">Ajuda</a>
 							</div>
 							<div class="pull-right">
 								<a href="<?php echo CAM_RAIZ_2?>functions/signOut.php" class="btn btn-default btn-flat">Sair</a>
@@ -107,7 +107,7 @@
 
 			<?php
 			//somente o adm do sistema pode ter acesso a estas opções
-			if($_SESSION['email'] == 'adm.bc.agendamento@gmail.com') {
+			if($_SESSION['email'] == 'suporte.sedepti@gmail.com') {
 
 				echo '<li class="treeview">
 				<a href="#">
@@ -134,7 +134,7 @@
 
 			<li class="header">OUTROS</li>
 
-			<li><a href="https://docs.google.com/presentation/d/17Huq49eHXC4f7llAxJo8bQCnsVGMXroTDAk9j1zSzLw/edit#slide=id.p" title="Em breve"><i class="fa fa-book"></i> <span>Manual do usuário</span></a></li>
+			<li><a href="https://docs.google.com/presentation/d/137rIvwXKnt5HpSXuNqkkhEPa49eN-IgFNmAekJOlBvI/edit?usp=sharing" title="Em breve"><i class="fa fa-book"></i> <span>Manual do usuário</span></a></li>
 			<li><a href="<?php echo CAM_BC_1;?>"><i class="fa fa-institution"></i> <span>Voltar para SIBI/UFPA</span></a></li>
 			<li><a href="<?php echo CAM_RAIZ_2;?>functions/signOut.php"><i class="fa fa-power-off"></i> <span>Sair</span></a></li>
 		</ul>

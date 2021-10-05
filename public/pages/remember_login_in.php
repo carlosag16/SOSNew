@@ -3,7 +3,7 @@
 <img id="normaliza_img" src="<?php echo CAM_RAIZ_2?>sos normaliza.png"/></a>
 
 <div class="info-box" style="text-align: center!important">
-    Esqueceu sua senha? Insira seu e-mail para recupera-la!
+    Esqueceu sua senha? Insira seu e-mail para recuperá-la!
 </div>
 
 

@@ -9,7 +9,7 @@
 //require_once("../../app/functions/custom.php");
 session_start();
 if($_SESSION['id'] == NULL){return redirect("login","danger","unset_login");}
-if($_SESSION['email'] != 'adm.bc.agendamento@gmail.com'){ return redirect("login","danger","unset_adm");}
+if($_SESSION['email'] != 'suporte.sedepti@gmail.com'){ return redirect("login","danger","unset_adm");}
 ?>
 
 <h2><div style="font-size:28px!important;clear: both;" class="info-aux">Cadastrar servidor</div></h2>

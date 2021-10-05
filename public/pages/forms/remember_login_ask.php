@@ -22,7 +22,7 @@ require '../../../app/functions/bdq.php';
     $_SESSION['concluidos'] = 0;
     $_SESSION['mostrar_serv_agd'] = 0;
 
-    if($_SESSION['email'] == 'adm.bc.agendamento@gmail.com'){
+    if($_SESSION['email'] == 'suporte.sedepti@gmail.com'){
         $_SESSION['tipo'] = 'Administrador';
     } else {
         $_SESSION['tipo'] = 'Servidor';

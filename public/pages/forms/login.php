@@ -42,7 +42,7 @@ if($captcha){
         $_SESSION['concluidos'] = 0;
         $_SESSION['giro_tabela'] = 'horizontal';
 
-        if($validate->email == 'adm.bc.agendamento@gmail.com'){
+        if($validate->email == 'suporte.sedepti@gmail.com'){
             $_SESSION['tipo'] = 'Administrador';
         } else {
             $_SESSION['tipo'] = 'Servidor';

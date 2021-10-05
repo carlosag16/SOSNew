@@ -134,7 +134,7 @@ header('Content-Type: text/html; charset=utf-8');
 									</div>
 									<!-- ========= horários de atuação do servidor ========== -->
 									<?php
-										if ($_SESSION['email'] != 'adm.bc.agendamento@gmail.com'){
+										if ($_SESSION['email'] != 'suporte.sedepti@gmail.com'){
 												echo '<div class="form-group">
 													<label for="" class="col-sm-2 control-label">Seus horários de atuação:</label>
 													<div class="col-sm-10">';

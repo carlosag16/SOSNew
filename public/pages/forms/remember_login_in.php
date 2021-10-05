@@ -19,13 +19,13 @@ if($captcha){
     
     if($resposta['success'] == true){       
         
-        $servidorEmail = DBReadOne("ser_servidores","ser_email","WHERE ser_email = \"$validate->email\" AND ser_ativo = 1");
+        $servidorEmail = DBReadOne("ser_servidores","ser_email","WHERE ser_email = \"$validate->email\" AND ser_ativo = 0");
         
         if($servidorEmail==NULL){
             return redirect('remember_login_in','danger','login_failed_email_unknown');
         }
         
-        $servidorId = DBReadOne("ser_servidores","ser_id","WHERE ser_email = \"$validate->email\" AND ser_ativo = 1");
+        $servidorId = DBReadOne("ser_servidores","ser_id","WHERE ser_email = \"$validate->email\" AND ser_ativo = 0");
         
         $data = [
             'para'     => [$servidorEmail],

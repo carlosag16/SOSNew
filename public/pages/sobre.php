@@ -26,7 +26,7 @@
     <!--BODY 1-->
     <div>
         <p style="text-align: justify">
-             O SOS Normaliza é um serviço voltado para a orientação sobre normalização acadêmica para os alunos (graduação, especialização, mestrado, doutorado), professores e servidores da Universidade Federal do Pará. O tempo médio de orientação é de 1 (uma) hora, com o objetivo de sanar as principais dúvidas do solicitante com relação às normas acadêmicas, conforme a ABNT. Através do sistema o solicitante marca o dia e horário e um bibliotecário devidamente preparado aguardará na Biblioteca Central para atender a solicitação.
+             O SOS Normaliza é um serviço voltado para a orientação sobre normalização acadêmica para os alunos (graduação, especialização, mestrado, doutorado), professores e servidores da Universidade Federal do Pará. O tempo médio de orientação é de 1 (uma) hora, com o objetivo de sanar as principais dúvidas do solicitante com relação às normas acadêmicas, conforme a ABNT. Através do sistema o solicitante marca o dia e horário e um bibliotecário devidamente preparado irá atender conforme solicitação online ou presencial.
         </p>
     </div>
 </div>

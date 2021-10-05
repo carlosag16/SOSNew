@@ -85,7 +85,7 @@
 
                 <a href="http://bc.ufpa.br" target="_blank" title="Ir para a página da Biblioteca Central"><img src="../app/BC.png" class="footer-logo" style="width: 12%;"/></a>
                 <br/><br/>
-                <a href="http://bc.ufpa.br/guia-de-trabalhos-academicos" target="_blank" title="Consultar o Guia de Trabalhos Acadêmicos" style="color:#e7302a!important;">Consultar Guia de Trabalhos Acadêmicos</a>
+                <a href="http://bc.ufpa.br/wp-content/uploads/2019/08/Guia-de-Trabalhos-Academicos-2019.pdf" target="_blank" title="Consultar o Guia de Trabalhos Acadêmicos" style="color:#e7302a!important;">Consultar Guia de Trabalhos Acadêmicos</a>
                 <br/><br/>
                 <strong>Universidade Federal do Pará<br/>
                 Biblioteca Central Prof. Dr. Clodoaldo Beckmann</strong><br/>

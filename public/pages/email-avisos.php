@@ -6,7 +6,7 @@ require_once('../../app/functions/bdq.php');
 require_once('../../bootstrap.php');
 
 session_start();
-if($_SESSION['id'] == NULL || $_SESSION['email'] != 'adm.bc.agendamento@gmail.com'){redirect("login","danger","unset_login");}
+if($_SESSION['id'] == NULL || $_SESSION['email'] != 'suporte.sedepti@gmail.com'){redirect("login","danger","unset_login");}
 ini_set('default_charset','UTF-8');
 $conn = DBConnect();
 $result = mysqli_query($conn,$sql);

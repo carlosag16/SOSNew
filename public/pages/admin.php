@@ -70,7 +70,7 @@ header('Content-Type: text/html; charset=utf-8');
 			<!-- ============= IMPORTANDO O DASHBOARD ============= -->
 			<?php
 
-			// if($_SESSION['email'] == 'adm.bc.agendamento@gmail.com'){
+			// if($_SESSION['email'] == 'suporte.sedepti@gmail.com'){
 			// 	include_once('dashboard.php');
 			// }
 			?>
